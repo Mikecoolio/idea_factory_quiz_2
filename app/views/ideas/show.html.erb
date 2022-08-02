@@ -10,4 +10,9 @@
     <p> Body: <%= @idea.body %> </p>
 </div>
 
+<div>
+    <%= render "shared/form" %> 
+    
+    <p> <%= button_to "Delete", idea_path(@idea.id), method: :delete %> </p>
+</div>
 

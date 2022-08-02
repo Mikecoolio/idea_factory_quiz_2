@@ -2,19 +2,7 @@
 <%= render "shared/navbar" %>
 <p> NEW IDEA PAGE </p>
 
-<%# <form>
-  <label for="title">Title:</label><br>
-  <input type="text" id="title" name="title"><br>
-  <label for="body">Body:</label><br>
-  <input type="text" id="body" name="body">
-</form> %>
-
-<%= form_for @idea do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-    <%= f.submit %>
-<% end %>
+<%= render "shared/form" %> 
 
 <%= render "shared/footer" %>   
+
