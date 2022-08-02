@@ -5,10 +5,10 @@
     <div class="container">
     <hr>
         <div class="row">
-            <%= idea.title %>
-            <%= idea.body %>
+            <p> Title: <%= idea.title %> </p>
+            <p> Body: <%= idea.body %> </p>
+            <p> <%= button_to "Edit", idea_path(idea.id), method: :get %> </p>
         </div>
-    <hr>
     </div>
 <% end%>
 
