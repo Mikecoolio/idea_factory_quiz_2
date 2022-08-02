@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+<%= render 'shared/navbar' %> 
+
+<% @ideas.each do |idea| %>
+    <div class="container">
+    <hr>
+        <div class="row">
+            <%= idea.title %>
+            <%= idea.body %>
+        </div>
+    <hr>
+    </div>
+<% end%>
+
+<%= render "shared/footer" %>
