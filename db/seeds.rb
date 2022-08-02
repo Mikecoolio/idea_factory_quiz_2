@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Idea.destroy_all
+
+50.times do
+    created_at = Faker::Date.backward(days:365 * 3)
+    updated_at = Faker::Date.backward(days:365 * 2)
+
+    i = Idea.create(
+        title: Faker::Lorem.word,
+        body: Faker::Lorem.paragraph,
+        created_at: created_at,
+        updated_at: created_at
+    )
+end
+
+ideas = Idea.all
+
+puts Cowsay.say("Generated #{ideas.count} ideas", :cow)
