@@ -1,8 +1,6 @@
 <%= render "shared/header" %>
 <%= render "shared/navbar" %>
 
-<%= render "shared/footer" %>
-
 <p><%= @idea.id %> </p>
 
 <div>
@@ -12,7 +10,7 @@
 
 <div>
     <%= render "shared/form" %> 
-    
+
     <p> <%= button_to "Delete", idea_path(@idea.id), method: :delete %> </p>
 </div>
 

@@ -10,6 +10,13 @@ Idea.destroy_all
 User.destroy_all
 
 PASSWORD = "123"
+User.create(
+    first_name: "Admin",
+    last_name: "User",
+    email: "admin@user.com",
+    password: PASSWORD
+  )
+
 rand(10..15).times do
     User.create({
         first_name: Faker::Name.first_name,

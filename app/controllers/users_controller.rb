@@ -4,16 +4,20 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)    
-    end
+        @user = User.new(user_params)
 
-    def destroy
-        
+        if @user.save
+            session[:user_id] = @user.id
+            flash[:notice] = "Signed up!"
+            redirect_to root_path
+        else
+            render :new, status: 303
+        end
     end
 
     private
 
     def user_params
-
+        params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end

@@ -12,7 +12,7 @@ class Ability
     alias_action :create, :read, :update, :delete, to: :crud
 
     can :crud, Idea do |idea|
-      idea == idea.user
+      user == idea.user
     end
 
 
