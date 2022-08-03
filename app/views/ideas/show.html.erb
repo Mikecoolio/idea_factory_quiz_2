@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<%= render "shared/navbar" %>
+
+<p><%= @idea.id %> </p>
+
+<div>
+    <p> Title: <%= @idea.title %> </p>
+    <p> Body: <%= @idea.body %> </p>
+</div>
+
+<div>
+    <%= render "shared/form" %> 
+
+    <p> <%= button_to "Delete", idea_path(@idea.id), method: :delete %> </p>
+</div>
+

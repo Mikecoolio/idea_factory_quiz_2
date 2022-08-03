@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+<%= render 'shared/navbar' %> 
+
+<% @ideas.each do |idea| %>
+    <div class="container">
+    <hr>
+        <div class="row">
+            <p> Title: <%= idea.title %> </p>
+            <p> Body: <%= idea.body %> </p>
+            <p> <%= button_to "Edit", idea_path(idea.id), method: :get %> </p>
+        </div>
+    </div>
+<% end%>
