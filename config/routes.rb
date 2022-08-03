@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root 'ideas#index'
 
   resources :ideas 
-  resources :users, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
 end

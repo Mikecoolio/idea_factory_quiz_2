@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-    belongs_to :idea
+    has_secure_password
+
+    has_many :ideas, dependent: :nullify
 end
